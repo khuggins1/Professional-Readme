@@ -17,4 +17,7 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown => {
+  console.log(templateDate);
+}
+return

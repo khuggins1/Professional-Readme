@@ -12,7 +12,7 @@ function generateMarkdown(data) {
  *[Installation]
  *[Usage]
  *[License]
- *Github
+ *[Github]
  *[Contributing]
  *[Tests]
 

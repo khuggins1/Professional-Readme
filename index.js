@@ -147,117 +147,15 @@ var questions =
       message: 'Are there any contributers?',
       // consider when method here when functiion allows conditional code based on the answers user supplied
       default: false,
-      validate: readme => {
-        if (readme) {
+      validate: contributers => {
+        if (contributers) {
           return Yes;
         } else {
           console.log('Please enter yes or no!')
           return No;
         }
       }},
-
-    {
-      type: 'confirm',
-      name: 'confirmAddReadMe',
-      message: 'Would you like to enter another Readme?',
-      // consider when method here when functiion allows conditional code based on the answers user supplied
-      default: false,
-      validate: readme => {
-        if (readme) {
-          return true;
-        } else {
-          console.log('Please enter yes or no!')
-          return false;
-        }
-      }}
-
   ]
-const promptReadme = readmeData => {
-    console.log(`
-  =================
-  Add a New ReadMe
-  =================
-  `);
-  if (!readmeData.readme) {
-    readmeData.readme = [];
-  };
-    return inquirer.prompt([
-      {
-        type: 'input',
-        name: 'Title',
-        message: 'What is the title of your ReadMe?',
-        validate: nameInput => {
-          if (nameInput) {
-            return true;
-          } else {
-            console.log('Please enter a name!');
-            return false;
-          }
-        }
-      },
-      {
-        type: 'input',
-        name: 'Description',
-        message: 'Provide a description of the ReadMe (Required)',
-        validate: description => {
-          if (description) {
-            return true;
-          } else {
-            console.log('Please enter a description!');
-            return false;
-          }
-        }
-      },
-      {
-        type: 'list',
-        name: 'license',
-        message: 'What license would you like to use?',
-        choices: [
-          "community", 
-          "MIT",
-          "GNU"
-        ]
-        
-      },
-      {
-        type: 'input',
-        name: 'link',
-        message: 'Enter the GitHub link to your ReadMe.',
-        validate: githublink => {
-          if (githublink) {
-            return true;
-          } else {
-            console.log('Please enter your name!');
-            return false;
-          }
-        }
-      },
-      {
-        type: 'confirm',
-        name: 'confirmAddReadMe',
-        message: 'Would you like to enter another Readme?',
-        // consider when method here when functiion allows conditional code based on the answers user supplied
-        default: false,
-        validate: readme => {
-          if (readme) {
-            return true;
-          } else {
-            console.log('Please enter yes or no!')
-            return false;
-          }
-        }}
-      
-      .then(readmeData => {
-        readmeData.readme.push(readmeData);
-        if (readmeData.confirmAddReadme) {
-          return promptReadme(readmeData);
-        } else {
-          return readmeData;
-        }
-        
-      }),
-  ])
-}
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {

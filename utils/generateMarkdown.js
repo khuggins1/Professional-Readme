@@ -1,46 +1,44 @@
 
 
-
-
-
-
 function generateMarkdown(data) {
-  return 
- `
- # ${data.Title}
- https://github.com/${data.Username}/${data.Title}
+  return `
+
+ #${data.Title}
 
  # Description
  ${data.Description}
+ 
  #Table of Contents
- *[Installation](#installation)
- *[Usage](#usage)
- *[License](#license)
- *[Contributing](#contributing)
- *[Tests](#tests)
- *[Questions](#questions)
+ *[Installation]
+ *[Usage]
+ *[License]
+ *Github
+ *[Contributing]
+ *[Tests]
 
+ 
  #Installation
- The folling necessary dependencines must be installed to run the application
+ The following necessary dependencines must be installed to run the application ${data.installation}
 
  #Usage
  In order to use this app, ${data.Usage}
 
  #License
- This project is licensed under the ${data, License} license.
-
- ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+ This project is licensed under the ${data.license} license.
 
  #Contributors: 
- Contributors: ${data. Contributing}
+ ${data.Contributing}
+
+ #Github
+${data.github}
 
  #Tests
-
- The folling is needed to run the test: ${data.Tests}
+ The following is needed to run the test: ${data.tests}
 
  #Questions
- If you have any questions about the repo, open an issue or contact ${data.Usage}
- `
-}
+ If you have any questions about the repo, open an issue or contact ${data.email}
+`
+};
+
 
 module.exports = generateMarkdown;

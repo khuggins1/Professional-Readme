@@ -14,9 +14,9 @@ function generateMarkdown(data) {
  *[Usage]
  ${data.Usage}
  *[License]
+ ${data.license}
  *Github
  ${data.github}
- ${data.license}
  *[Contributing]
  ${data.Contributing}
  *[Tests]
@@ -33,7 +33,7 @@ function generateMarkdown(data) {
 
 
  #Contributors: 
- Contributors: ${data. Contributing}
+ Contributors: ${data.Contributing}
 
  #Tests
  The following is needed to run the test: ${data.tests}

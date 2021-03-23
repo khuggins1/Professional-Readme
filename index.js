@@ -43,7 +43,7 @@ var questions =
     {
       type: "input",
       name: "email",
-      message: "What is your email address?",
+      message: "What is your email address? If someone has questions?",
       validate: email => {
         if (email) {
           return true;
@@ -57,12 +57,25 @@ var questions =
       type: 'input',
       name: 'Title',
       message: 'What is the title of your ReadMe?',
-      validate: nameInput => {
-        if (nameInput) {
-          return true;
+      validate: title => {
+        if (title) {
+          return true; 
         } else {
           console.log('Please enter a name!');
-          return false;
+          return false; 
+        }
+      }
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'What does someone test your Readme?',
+      validate: tests => {
+        if (tests) {
+          return true; 
+        } else {
+          console.log('Enter something!');
+          return false; 
         }
       }
     },
@@ -80,6 +93,19 @@ var questions =
       }
     }, 
     {
+      type: 'input',
+      name: 'Usage',
+      message: 'How does someone use this Readme?',
+      validate: Usage => {
+        if (Usage) {
+          return true;
+        } else {
+          console.log('Please enter a description!');
+          return false;
+        }
+      }
+    }, 
+    {
       type: 'list',
       name: 'license',
       message: 'What license would you like to use?',
@@ -88,7 +114,6 @@ var questions =
         "MIT",
         "GNU"
       ]
-      
     },
     {
       type: 'input',

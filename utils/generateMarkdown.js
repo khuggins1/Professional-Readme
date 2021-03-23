@@ -1,61 +1,45 @@
 
-// function renderLicenseBadge(license) {
-//   if (license !== 'none'){
-//     return `
-//     GitHubl`
-//   }
-// }
-
-
 
 function generateMarkdown(data) {
   return `
 
-  # ${data.Title}
+ #${data.Title}
 
-  ## Table of Contents
- 
- #projectReadme ${data.NAME}
-//  https://github.com/${data.Username}/${data.Title}
-
-#projectGithub
- ${data.github}
  # Description
  ${data.Description}
+ 
  #Table of Contents
- *[Installation](#installation)
+ *[Installation]
  ${data.installation}
- *[Usage](#usage)
+ *[Usage]
  ${data.Usage}
- *[License](#license)
+ *[License]
+ *Github
+ ${data.github}
  ${data.license}
- *[Contributing](#contributing)
+ *[Contributing]
  ${data.Contributing}
- *[Tests](#tests)
+ *[Tests]
  ${data.tests}
- *[Questions](#questions)
- ${data.questions}
-
+ 
  #Installation
- The folling necessary dependencines must be installed to run the application
+ The following necessary dependencines must be installed to run the application ${data.installation}
 
  #Usage
  In order to use this app, ${data.Usage}
 
  #License
- This project is licensed under the ${data.icense} license.
+ This project is licensed under the ${data.license} license.
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
  #Contributors: 
  Contributors: ${data. Contributing}
 
  #Tests
-
- The folling is needed to run the test: ${data.Tests}
+ The following is needed to run the test: ${data.tests}
 
  #Questions
- If you have any questions about the repo, open an issue or contact ${data.Usage}
+ If you have any questions about the repo, open an issue or contact ${data.email}
 `
 };
 

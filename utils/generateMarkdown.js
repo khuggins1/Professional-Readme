@@ -10,17 +10,12 @@ function generateMarkdown(data) {
  
  #Table of Contents
  *[Installation]
- ${data.installation}
  *[Usage]
- ${data.Usage}
  *[License]
- ${data.license}
  *Github
- ${data.github}
  *[Contributing]
- ${data.Contributing}
  *[Tests]
- ${data.tests}
+
  
  #Installation
  The following necessary dependencines must be installed to run the application ${data.installation}
@@ -31,9 +26,11 @@ function generateMarkdown(data) {
  #License
  This project is licensed under the ${data.license} license.
 
-
  #Contributors: 
- Contributors: ${data.Contributing}
+ ${data.Contributing}
+
+ #Github
+${data.github}
 
  #Tests
  The following is needed to run the test: ${data.tests}

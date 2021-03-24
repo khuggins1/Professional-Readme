@@ -8,6 +8,7 @@ function generateMarkdown(data) {
  # Description
  ${data.Description}
  
+
  #Table of Contents
  *[Installation]
  *[Usage]
@@ -30,7 +31,7 @@ function generateMarkdown(data) {
  ${data.Contributing}
 
  #Github
-${data.github}
+${data.github.gitlink}
 
  #Tests
  The following is needed to run the test: ${data.tests}

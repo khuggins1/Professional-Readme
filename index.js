@@ -69,7 +69,7 @@ var questions =
     {
       type: 'input',
       name: 'tests',
-      message: 'What does someone test your Readme?',
+      message: 'How does someone test your Readme?',
       validate: tests => {
         if (tests) {
           return true; 
@@ -130,7 +130,7 @@ var questions =
     },
     {
       type: 'input',
-      name: 'link',
+      name: 'gitlink',
       message: 'Enter the GitHub link to your ReadMe.',
       validate: githublink => {
         if (githublink) {
@@ -149,10 +149,10 @@ var questions =
       default: false,
       validate: contributers => {
         if (contributers) {
-          return Yes;
+          return true;
         } else {
           console.log('Please enter yes or no!')
-          return No;
+          return false;
         }
       }},
   ]
